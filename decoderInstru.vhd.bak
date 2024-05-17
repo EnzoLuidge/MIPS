@@ -1,0 +1,24 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity decoderInstru is
+  port ( opcode : in std_logic_vector(5 downto 0);
+         saida : out std_logic_vector(1 downto 0)
+  );
+end entity;
+
+architecture comportamento of decoderInstru is
+  
+--  constant SOMA  : std_logic_vector(1 downto 0) := "11";
+--  constant SUB  : std_logic_vector(1 downto 0) := "01";
+ 
+  begin
+
+saida(1) <= '1' when (opcode = "100000") else
+		 	--SUB  when (opcode = "100010") else
+			'0';
+			
+saida(0) <= '1' when (opcode = "100000") or (opcode = "100010") else
+					'0';
+					
+end architecture;

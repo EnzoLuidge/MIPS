@@ -1,0 +1,86 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Aula13 is
+  -- Total de bits das entradas e saidas
+  generic ( larguraDados : natural := 32;
+        larguraEnderecos : natural := 9;
+		  
+        simulacao : boolean := FALSE -- para gravar na placa, altere de TRUE para FALSE
+  );
+  port   (
+    CLOCK_50 : in std_logic;
+	 saida_pc2 : out std_logic_vector(31 downto 0);
+    ULA_OUT: out std_logic_vector(31 downto 0);
+	 wr_reg: out std_logic;
+	 reg_rs : out std_logic_vector(31 downto 0)
+	 
+	 
+  );
+end entity;
+
+
+architecture arquitetura of Aula13 is	
+  signal ROM_Address_signal : std_logic_vector (31 downto 0);
+  
+  signal Dado : std_logic_vector (31 downto 0);
+  signal saida_dec: std_logic_vector(1 downto 0);
+  alias opcode : std_logic_vector(5 downto 0) is Dado(31 downto 26);
+  alias rs : std_logic_vector(4 downto 0) is Dado(25 downto 21);
+  alias rt : std_logic_vector(4 downto 0) is Dado(20 downto 16);
+  alias rd : std_logic_vector(4 downto 0) is Dado(15 downto 11);
+  alias shamt : std_logic_vector(4 downto 0) is Dado(10 downto 6);
+  alias funct : std_logic_vector(5 downto 0) is Dado(5 downto 0);
+  
+  signal CLK : std_logic;
+  signal entrada_pc : std_logic_vector(31 downto 0);
+  signal saida_pc : std_logic_vector(31 downto 0);
+ 
+  
+  signal DadoLidoReg1: std_logic_vector(31 downto 0);
+  signal DadoLidoReg2: std_logic_vector(31 downto 0);
+  signal DadoEscritoReg3: std_logic_vector(31 downto 0);
+ 
+begin
+
+-- Instanciando os componentes:
+
+-- Para simular, fica mais simples tirar o edgeDetector
+
+CLK <= CLOCK_50;
+PC : entity work.registradorGenerico   generic map (larguraDados => 32)
+          port map (DIN => entrada_pc, DOUT => saida_pc, ENABLE => '1', CLK => CLK, RST => '0');
+			 
+incrementaPC :  entity work.somaConstante  generic map (larguraDados => 32, constante => 4)
+        port map( entrada => saida_pc, saida => entrada_pc);
+ 		 
+
+ROM1 : entity work.ROMMIPS   generic map (dataWidth => 32, addrWidth => 32)
+          port map (Endereco => saida_pc, Dado => Dado);
+
+DECODER :  entity work.decoderInstru
+        port map( opcode => funct,
+                 saida => saida_dec); 
+		 
+ULA1 : entity work.ULASomaSub  generic map(larguraDados => 32)
+          port map (entradaA => DadoLidoReg1, entradaB => DadoLidoReg2, saida => DadoEscritoReg3, seletor => saida_dec(1));
+
+		 
+bancoreg : entity work.bancoReg 
+	 port map ( clk => CLK,
+--
+        enderecoA => rs,
+        enderecoB => rt,
+        enderecoC => rd,
+--
+        dadoEscritaC => DadoEscritoReg3,
+--
+        escreveC => saida_dec(0),
+        saidaA  => DadoLidoReg1,
+        saidaB  => DadoLidoReg2);
+
+ULA_OUT<=DadoEscritoReg3;
+reg_rs <= DadoLidoReg1;
+saida_pc2 <= saida_pc;
+wr_reg <= saida_dec(0);
+end architecture;
