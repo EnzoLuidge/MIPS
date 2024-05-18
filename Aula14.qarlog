@@ -1,24 +1,40 @@
 Quartus Prime Archive log --	C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/Aula14.qarlog
 
 Archive:	C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/Aula14.qar
-Date:		Thu May 02 18:53:38 2024
+Date:		Sat May 18 10:40:01 2024
 Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 	=========== Files Selected: ===========
 C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/Aula14.qpf
 C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/Aula14.qsf
 C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/Aula14.vhd
+C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/DecoderFunct.vhd
+C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/DecoderOpcode.vhd
 C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/RAMMIPS.vhd
 C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/ROMMIPS.vhd
+C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/Somador1bit.vhd
+C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/ULA1bit.vhd
+C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/ULA1bit_32.vhd
+C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/ULAFINAL.vhd
 C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/ULASomaSub.vhd
+C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/UnidadeControleULA.vhd
+C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/Waveform.vwf
 C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/bancoReg.vhd
+C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/conversorHex7seg.vhd
 C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/decoderInstru.vhd
+C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/edgeDetector.vhd
 C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/estendeSinalGenerico.vhd
 C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/muxGenerico2x1.vhd
+C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/muxGenerico2x1bit.vhd
+C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/muxGenerico4x1.vhd
+C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/muxGenerico4x1bit.vhd
 C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/registradorGenerico.vhd
+C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/shiftLeft.vhd
+C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/shiftLeft2.vhd
 C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/somaConstante.vhd
+C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/somaConstante2.vhd
 c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
-	======= Total: 13 files to archive =======
+	======= Total: 29 files to archive =======
 
 	================ Status: ===============
 All files archived successfully.

@@ -14,7 +14,7 @@ architecture comportamento of DecoderFunct is
   constant function_and : std_logic_vector(5 downto 0) := "100100";
   constant function_or  : std_logic_vector(5 downto 0) := "100101";
   constant function_slt : std_logic_vector(5 downto 0) := "101010";
-
+  constant function_jr : std_logic_vector(5 downto 0) := "001000";
  begin
   -- seletor da operação = "1" quando soma e "0" quando subtração
   -- soma quando:
@@ -26,11 +26,12 @@ architecture comportamento of DecoderFunct is
 	-- tipoR = "1" e funct = sub
 
   
-  operacaoFunct <= "010" when funct = function_add else
+  operacaoFunct <=  "010" when funct = function_add else
 						  "110" when funct = function_sub else
 						  "000" when funct = function_and else
 						  "001" when funct = function_or else
 						  "111" when funct = function_slt else
+						  "000" when funct = function_jr else
 						  "000";
   
 			  

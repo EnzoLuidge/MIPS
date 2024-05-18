@@ -37,7 +37,7 @@ MUX2x1 : entity work.muxGenerico2x1bit generic map (larguraDados => larguraDados
 						saida_MUX => SaidaMux2x1);
 						
 -- MUX4X1
-MUX4X1 : entity work.muxGenerico4x1 generic map (larguraDados => larguraDados)
+MUX4X1 : entity work.muxGenerico4x1bit generic map (larguraDados => larguraDados)
 			port map(entradaA_MUX => And_Mux4x1,
 						entradaB_MUX => Or_Mux4x1,
 						entradaC_MUX => Soma_Mux4x1,

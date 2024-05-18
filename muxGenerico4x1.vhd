@@ -5,9 +5,9 @@ entity muxGenerico4x1 is
   -- Total de bits das entradas e saidas
   generic ( larguraDados : natural := 32);
   port (
-    entradaA_MUX, entradaB_MUX,entradaC_MUX, entradaD_MUX : in std_logic;
+    entradaA_MUX, entradaB_MUX,entradaC_MUX, entradaD_MUX : in std_logic_vector(larguraDados-1 downto 0);
     seletor_MUX : in std_logic_vector(1 downto 0);
-    saida_MUX : out std_logic
+    saida_MUX : out std_logic_vector(larguraDados-1 downto 0)
   );
 end entity;
 

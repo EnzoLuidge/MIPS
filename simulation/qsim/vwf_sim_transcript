@@ -26,7 +26,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu May 16 12:52:06 2024
+    Info: Processing started: Sat May 18 09:43:48 2024
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Aula14 -c Aula14 --vector_source="C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/Waveform.vwf" --testbench_file="C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/simulation/qsim/Waveform.vwf.vht"
 Info (119006): Selected device 5CEBA4F23C7 for design "Aula14"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -56,14 +56,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu May 16 12:52:08 2024
+    Info: Processing started: Sat May 18 09:43:51 2024
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/simulation/qsim/" Aula14 -c Aula14
 Info (119006): Selected device 5CEBA4F23C7 for design "Aula14"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file Aula14.vho in folder "C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4729 megabytes
-    Info: Processing ended: Thu May 16 12:52:10 2024
+    Info: Peak virtual memory: 4732 megabytes
+    Info: Processing ended: Sat May 18 09:43:53 2024
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -81,18 +81,19 @@ C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vsim -c -do Aula14.do
 
 Reading pref.tcl
 
-
 # 2020.1
+
 
 # do Aula14.do
 
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:52:12 on May 16,2024
+# Start time: 09:43:56 on May 18,2024
 # vcom -work work Aula14.vho 
 
 # -- Loading package STANDARD
+
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package VITAL_Timing
@@ -101,16 +102,16 @@ Reading pref.tcl
 # -- Loading package altera_primitives_components
 # -- Loading package altera_lnsim_components
 # -- Loading package cyclonev_atom_pack
-
 # -- Loading package cyclonev_components
 # -- Compiling entity Aula14
+
 # -- Compiling architecture structure of Aula14
 
-# End time: 12:52:16 on May 16,2024, Elapsed time: 0:00:04
+# End time: 09:44:00 on May 18,2024, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:52:16 on May 16,2024
+# Start time: 09:44:00 on May 18,2024
 # vcom -work work Waveform.vwf.vht 
 
 # -- Loading package STANDARD
@@ -118,11 +119,12 @@ Reading pref.tcl
 # -- Loading package std_logic_1164
 # -- Compiling entity Aula14_vhd_vec_tst
 # -- Compiling architecture Aula14_arch of Aula14_vhd_vec_tst
-# End time: 12:52:16 on May 16,2024, Elapsed time: 0:00:00
+
+# End time: 09:44:01 on May 18,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Aula14_vhd_vec_tst 
-# Start time: 12:52:16 on May 16,2024
+# Start time: 09:44:01 on May 18,2024
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -140,13 +142,19 @@ Reading pref.tcl
 # Loading cyclonev.cyclonev_io_ibuf(arch)
 # Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 664238 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 771000 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#34
 
 # Simulation time: 0 ps
 
-# End time: 12:52:23 on May 16,2024, Elapsed time: 0:00:07
+# Simulation time: 0 ps
+
+# Simulation time: 0 ps
+
+# Simulation time: 0 ps
+
+# End time: 09:44:16 on May 18,2024, Elapsed time: 0:00:15
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
@@ -159,7 +167,7 @@ Reading C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/simulation/qsim
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/simulation/qsim/Aula14_20240516125223.sim.vwf
+Writing the resulting VWF to C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/simulation/qsim/Aula14_20240518094416.sim.vwf
 
 Finished VCD to VWF conversion.
 

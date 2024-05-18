@@ -1,5 +1,5 @@
 Archive Project report for Aula14
-Sat May 11 14:19:29 2024
+Sat May 18 10:40:01 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Sat May 11 14:19:29 2024 ;
+; Archive Project Status ; Successful - Sat May 18 10:40:01 2024 ;
 ; Revision Name          ; Aula14                                ;
 ; Top-level Entity Name  ; Aula14                                ;
 ; Family                 ; Cyclone V                             ;
@@ -54,14 +54,14 @@ Info: Archive will store files relative to the closest common parent directory
 Info (13213): Using common directory C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
-Info: Generated archive 'C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula15/Aula15.qar'
+Info: Generated archive 'C:/Users/Enzo/Desktop/Sexto Semestre pt2/DesComp2/Aula14/Aula14.qar'
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'Aula14.archive.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4823 megabytes
-    Info: Processing ended: Sat May 11 14:19:29 2024
+    Info: Peak virtual memory: 4827 megabytes
+    Info: Processing ended: Sat May 18 10:40:01 2024
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -76,9 +76,16 @@ Info: Quartus Prime Shell was successful. 0 errors, 1 warning
 ; Aula14.vhd                                                   ;
 ; bancoReg.vhd                                                 ;
 ; c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf ;
+; conversorHex7seg.vhd                                         ;
+; DecoderFunct.vhd                                             ;
 ; decoderInstru.vhd                                            ;
+; DecoderOpcode.vhd                                            ;
+; edgeDetector.vhd                                             ;
 ; estendeSinalGenerico.vhd                                     ;
 ; muxGenerico2x1.vhd                                           ;
+; muxGenerico2x1bit.vhd                                        ;
+; muxGenerico4x1.vhd                                           ;
+; muxGenerico4x1bit.vhd                                        ;
 ; RAMMIPS.vhd                                                  ;
 ; registradorGenerico.vhd                                      ;
 ; ROMMIPS.vhd                                                  ;
@@ -86,7 +93,12 @@ Info: Quartus Prime Shell was successful. 0 errors, 1 warning
 ; shiftLeft2.vhd                                               ;
 ; somaConstante.vhd                                            ;
 ; somaConstante2.vhd                                           ;
+; Somador1bit.vhd                                              ;
+; ULA1bit.vhd                                                  ;
+; ULA1bit_32.vhd                                               ;
+; ULAFINAL.vhd                                                 ;
 ; ULASomaSub.vhd                                               ;
+; UnidadeControleULA.vhd                                       ;
 ; Waveform.vwf                                                 ;
 +--------------------------------------------------------------+
 
